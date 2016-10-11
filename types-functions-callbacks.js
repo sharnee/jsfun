@@ -16,6 +16,7 @@ var addOne = function (nubString){
 console.log('hey yall')
 
 console.assert(addOne(1) === 2)
+console.assert("my name is ")
 
 // Part 0
 
