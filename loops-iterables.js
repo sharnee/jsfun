@@ -4,7 +4,15 @@
  * Write a function that calculates the sum of all the numbers in an array
  */
 
-
+ var sumOfArray = function (numArray){
+	var container = 0;
+		for ( i=0; i< numArray.length; i = i+1){
+        var element = numArray[i]
+           container = container + element;
+          container = container + numArray[i]
+	}
+   return container
+  };
 
 console.assert(sumOfArray([1, 2]) === 3);
 console.assert(sumOfArray([]) === 0);
@@ -15,6 +23,20 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 
 // Write a function maxOfArray() that takes an array of
 // numbers as an argument and finds the highest number.
+
+var maxOfArray = function (numArray){
+  var hightestNum = 0
+  for (i= 0; i< numArray.length; i++){
+    if (isNaN(numArray[i])){
+      return NaN
+    }
+    if (numArray[i] > hightestNum){
+
+      hightestNum = numArray[i]
+    }
+    }
+  return hightestNum
+}
 
 
 console.assert(maxOfArray([2,4,3]) === 4)
@@ -28,9 +50,17 @@ console.assert(isNaN(maxOfArray([1,2,'bucklemyshoe'])))
  * and returns true if it is a vowel, false otherwise.
  */
 
-function isVowel(symbol){
-    // YOUR CODE HERE
+function isVowel(symbal){
+  
+  symbal=symbal.toLowerCase()
+  var myVowels = ["a","e","i","o","u"]
+ for (i=0; i<myVowels.length; i++){
+ if (symbal=== myVowels[i]){
+       return true
+     }
 }
+ return false 
+};
 
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);

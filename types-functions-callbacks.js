@@ -9,10 +9,11 @@
 
 // Write a function called addOne() that returns the input number, plus one. 
 
+var addOne = function (nubString){
+ return nubString + 1;
+}; 
 
-var spark = 1;
-var addOne= spark + 1;
-console.log(addOne);
+console.log('hey yall')
 
 console.assert(addOne(1) === 2)
 
@@ -21,7 +22,7 @@ console.assert(addOne(1) === 2)
 // Fix the following code so that the assertion passes. 
 
 var doubleNum = function(num) {
-	return newNum = num * 2
+	return newNum = num * 2;
 }
 
 console.assert(doubleNum(5) === 10)
@@ -34,8 +35,8 @@ console.assert(doubleNum(5) === 10)
  * inputs and computes the sum of those two numbers.
  */
 
-function add(x, y) {
-  return x + y;
+var sum = function(x,y){
+  return x+y;
 }
 
 console.assert(sum(8, 11) === 19);
@@ -48,7 +49,7 @@ console.assert(sum(4, 100) === 104);
 // repeating yourself, use your sum function inside 
 // of your average function.
 
-function average(x,y){
+var average = function(x,y){
   return (x+y)/2;
 }
 
@@ -62,14 +63,6 @@ console.assert(average(100,200) === 150)
  inputs is not a number, it will return "null."
  */
 
-function add(x,y) {
-    if (typeof x,y === "number"){
-    return x + y;
-}
-else{
-    return "null";
-}
-}
 
 console.assert(sum(867, 5309) === 6176);
 console.assert(sum('867', 5309) === null);
@@ -81,15 +74,6 @@ console.assert(sum(true, 5) === null);
 // Write a function called isNegative that will tell 
 // whether a number is negative or not. 
 
-var isNegative = function (n) {
-    if (n >0){
-    return "false";
-}
-else{
-    return "true"
-}
-};
-
 console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
 console.assert(isNegative(-999) === true)
@@ -100,40 +84,14 @@ console.assert(isNegative(-999) === true)
 // To avoid repeating yourself, use your isNegative 
 // function inside your sum funciton ***
 
-function add(x, y) {
-  return x + y;
-  if (n>0){
-    return "false"
-  }
-  else {
-    return "true"
-  }
-};
-
 console.assert(sum(5,-5) === null)
 
 
 // Part 5
 
 // Write a function that will find the minimum of four 
-// input numbers. You can do it using nested if statements,
+// input numbers. You can do it using nested if statements,"?"
 // boolean operators, or both (but not neither). 
-
-var minimum = function (a,b,c,d){
-  if (a < b && a < c && a < d){
-    return a;
-  }
-  if (b < a && b < c && b < d){
-    return b;
-  }
-  
-  if (c < a && c < b && c < d){
-    return c;
-  }
-  if (d < a && d < b && d < c){
-    return d;
-  }
-};
 
 console.assert(minimum(1,2,4,0) === 0)
 console.assert(minimum(1000,-2,-99,50) === -99)
@@ -147,15 +105,6 @@ console.assert(minimum(1000,-2,99,50) === -2)
 // return true if either input is a string, but not 
 // both or neither. 
 
-var justOneString = function (x,y) {
-    if (x || y ==="string"){
-    return "true";
-}
-else{
-    return "false"
-}
-};
-
 console.assert(justOneString('a',5) === true)
 console.assert(justOneString(6,'dotron') === true)
 console.assert(justOneString('peanut','butter') === false)
@@ -166,11 +115,6 @@ console.assert(justOneString(8,null) === false)
 
 // Write a function called doTwice that takes as input a 
 // function and invokes that function twice. 
-
-var doTwice = function (n){
-	return (n + "" + n)
-}
-
 
 // For testing purposes, I've included some functions that
 // modify global variables, although that's not a good
