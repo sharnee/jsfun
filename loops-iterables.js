@@ -77,9 +77,16 @@ console.assert(isVowel("E") === true);
  * string "books".
  */
 
+var reverse =function (someString) {
+  var outPutString = '';
+  for (var i = someString.length - 1; i >= 0; i--)
+    outPutString += someString[i];
+  return outPutString;
+}
 
 console.assert(reverse("books") === "skoob")
 console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+
 
 
 /**
