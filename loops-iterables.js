@@ -99,7 +99,26 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  * - for every number that is a multiple of 3 and 5, return "fizzbuzz"
  */
 
+//how do you know if a numb is a multipule of 3 or 5
 
+var fizzbuzz = function ( someNumN){
+var numPush = ''
+  for(var i=1; i<someNumN; i++){
+    var mod5 = i % 5
+    var mod3 = i % 3
+//     var el = someNumN[i]
+     if ( mod5 && mod3 === 0) {
+       numPush = numPush + 'fizzbuzz'
+    }else if (mod5 === 0) {
+      numPush = numPush + 'buzz'
+    } else if (mod3 === 0){
+     numPush = numPush + 'fizz'
+    }else{ 
+     numPush = numPush + '.'
+    }
+  }
+  return numPush
+};
 
 console.assert(fizzbuzz(1) === ".")
 console.assert(fizzbuzz(2) === "..")
@@ -117,8 +136,27 @@ console.assert(fizzbuzz(10) === "..fizz.buzzfizz..fizzbuzz")
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
-}
 
+// name the function
+// create a container for outPutString
+// split the string into individule strings
+// using a for loop at the index 0 go down the string and compare each indivstring 
+// find the length of each indiString and compare it to the length of the next indivstring
+// keep the longest word and discard the shortest
+// return the longest word
+var longestWord = ' '
+var findLongestWord = function (inputString){
+  var splitString = inputString.split(' ')
+  var splitLength = splitString[0].length;
+  for (var i=1; i<splitString.length; i++){
+    var indexLength = splitString[i].length;
+          if (indexLength > splitLength){
+            splitLength = indexLength
+            longestWord = splitString[i]
+  }
+ }
+ return longestWord
+};
 console.assert(findLongestWord("a book full of dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
 
@@ -131,9 +169,18 @@ console.assert(findLongestWord("don't mess with Texas") === "Texas")
  * - if no GCD exists, return 1
  */
 
+var GCD = function () {
 
+}
 
 console.assert(GCD(5,1) === 1);
 console.assert(GCD(15,3) === 3);
 console.assert(GCD(15,5) === 5);
 console.assert(GCD(50,20) === 10);
+
+
+
+
+
+
+
