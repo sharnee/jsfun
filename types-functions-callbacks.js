@@ -65,6 +65,7 @@ console.assert(average(100,200) === 150)
  */
 
 
+
 console.assert(sum(867, 5309) === 6176);
 console.assert(sum('867', 5309) === null);
 console.assert(sum(true, 5) === null);
@@ -74,6 +75,15 @@ console.assert(sum(true, 5) === null);
 
 // Write a function called isNegative that will tell 
 // whether a number is negative or not. 
+
+var isNegative = function (inputNumb){
+	if (inputNumb >= 0){
+		return 'false'
+	}
+	else {
+		return 'true'
+	}
+}
 
 console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
@@ -85,6 +95,16 @@ console.assert(isNegative(-999) === true)
 // To avoid repeating yourself, use your isNegative 
 // function inside your sum funciton ***
 
+var isNegative = function (inputNumb, inputNumb2){
+	if (inputNumb|| inputNumb2 <= 0){
+		return 'null'
+	}
+	else {
+		return x + y
+	}
+}
+
+
 console.assert(sum(5,-5) === null)
 
 
@@ -93,6 +113,26 @@ console.assert(sum(5,-5) === null)
 // Write a function that will find the minimum of four 
 // input numbers. You can do it using nested if statements,"?"
 // boolean operators, or both (but not neither). 
+
+// why doesn't this work?
+
+// var minimum = function (someString){
+//   var el = someString[0].length
+//   for(var i=1; i<someString; i++ )
+//     var elIndex = someString[i].length
+//     if (el > elIndex ){
+//       el = elIndex
+//     }else{
+     
+//     }
+//   return el
+// }
+
+
+// console.log(minimum(1,2,4,0))
+// console.log(minimum(1000,-2,-99,50))
+// console.log(minimum(-1000,-2,-99,50))
+// console.log(minimum(1000,-2,99,50))
 
 console.assert(minimum(1,2,4,0) === 0)
 console.assert(minimum(1000,-2,-99,50) === -99)
@@ -105,6 +145,20 @@ console.assert(minimum(1000,-2,99,50) === -2)
 // Using logical operators, write a function that will
 // return true if either input is a string, but not 
 // both or neither. 
+
+// why doesn't this work?
+
+var justOneString = function (input1, input2){
+	
+	if (isNaN(input1 && input2)){
+ 		return false
+	}else if (!isNaN (input1 && input2)){
+		return false
+	}else {
+      return true
+    }
+}
+
 
 console.assert(justOneString('a',5) === true)
 console.assert(justOneString(6,'dotron') === true)

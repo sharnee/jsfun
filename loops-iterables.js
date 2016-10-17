@@ -155,8 +155,9 @@ var findLongestWord = function (inputString){
             longestWord = splitString[i]
   }
  }
- return longestWord
-};
+ return longest
+
+ //not running texas but running book twice. I'm not sure why
 console.assert(findLongestWord("a book full of dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
 
@@ -180,7 +181,7 @@ console.assert(GCD(50,20) === 10);
 
 
 
-
+s
 
 
 
