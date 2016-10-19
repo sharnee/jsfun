@@ -1,0 +1,22 @@
+//var decipher = function (cipher, key)     input nw kirmywiw  shift cipher and cezer cipher 
+// abcdefghijklmnopqrstuvwxyz
+
+var alph = 'abcdefghijklmnopqrstuvwxyz'
+var decipher = function (cyber, key){
+  var decodedString = ' '
+  for(var i=0; i< cyber.length; i++){
+    var char = cyber[i].toLowerCase
+    //get characters position in alph
+    var currentPos = alph.indexOf(char),
+        newPos = currentPos - key,
+        newChar = alph[newPos]
+   decodedString += newChar
+    }
+  return decodedString
+}
+var result = decipher('FQI', 2)
+
+console.log(result)
+
+
+API Key: c08a60c041f24311b98b7ef7108628d6
