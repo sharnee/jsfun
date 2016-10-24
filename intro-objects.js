@@ -17,6 +17,16 @@ var tile = {
     color: "blue"
 }
 
+var flipColor = function (inputObj){
+    if (inputObj['color'] === 'blue') {
+        inputObj ['color'] = 'red'
+    } 
+    else if (inputObj['color']=== 'red'){
+        inputObj['color'] = 'blue'
+    }
+    return inputObj
+}
+
 var tile2 = flipColor(tile)
 console.assert(tile2.color === "red")
 console.assert(flipColor(tile2).color === "blue")
@@ -28,14 +38,37 @@ console.assert(flipColor(tile2).color === "blue")
 // of objects with first and last names and returns an array 
 // of strings, where each string is a customer's full name.
 
+
+
 var customers = [
-    { first: 'Joe', last: 'Blogs'},
+    { first: 'Joe', last: 'Blogs', eyes: 'brown'},
     { first: 'John', last: 'Smith'},
     { first: 'Dave', last: 'Jones'},
     { first: 'Jack', last: 'White'}
 ]
 
-console.assert(getFullNames(customers)[1] === "John Smith")
+// this function is supposed to pull the first and last name values to be put into a string. then return the string
+var objectToFull = function (personObj){
+    var fullNameString = personObj.first + " " + personObj.last
+    // console.log(fullNameString)
+    return fullNameString
+    
+}
+
+
+
+var getFullNames = function (inputArray){
+    var emptyArray = []
+    for (var i = 0; i < inputArray.length; i++){
+        //convert the objects into a string of first and last names
+        var someVar = objectToFull(inputArray[i])
+        emptyArray.push(someVar)
+        console.log(emptyArray)
+
+    }
+}
+
+console.assert(getFullNames(customers)[1])
 
 
 
