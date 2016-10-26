@@ -47,25 +47,24 @@ var customers = [
     { first: 'Jack', last: 'White'}
 ]
 
-// this function is supposed to pull the first and last name values to be put into a string. then return the string
-var objectToFull = function (personObj){
+var objectToFullNameString = function (personObj){
     var fullNameString = personObj.first + " " + personObj.last
-    // console.log(fullNameString)
+//     console.log(fullNameString)
     return fullNameString
-    
+  
 }
-
-
+// console.log(objectToFullNameString(customers[1]))
 
 var getFullNames = function (inputArray){
     var emptyArray = []
     for (var i = 0; i < inputArray.length; i++){
         //convert the objects into a string of first and last names
-        var someVar = objectToFull(inputArray[i])
+        var someVar = objectToFullNameString(inputArray[i])
         emptyArray.push(someVar)
-        console.log(emptyArray)
+//         console.log(emptyArray[i])
 
     }
+  return emptyArray
 }
 
 console.assert(getFullNames(customers)[1])
@@ -80,6 +79,24 @@ console.assert(getFullNames(customers)[1])
 // (which is, almost, what this is) should take a name input, and the dog should receive the 
 // assigned name.
 
+
+
+
+var generateDog = function (nameInput) {
+    
+   return  dog {
+        legs: 4, 
+        weight: '100 pounds', 
+        color: 'brown',
+        name: nameInput
+    }
+
+
+
+}
+
+
+
 var dog = generateDog('rex')
 
 console.assert(dog.legs === 4)
@@ -93,6 +110,33 @@ console.assert(dog.name === 'carl')
 // return a new version of that string where the first letter of every word is replaced 
 // with the letter 'r'.
 
+var generateDog = function (nameInput) {
+    
+   var animal = {
+        legs: 4, 
+        weight: '100 pounds', 
+        color: 'brown',
+        name: nameInput, 
+        speak: function (inputString){
+                    var outString = ''
+                    var arrayOfWords = inputString.split(' ')
+                    for (var i = 0; i<arrayOfWords.length; i++){
+                        var wordIndex = arrayOfWords[i]
+                        var changeFirstLetter = wordIndex.slice(1)
+                        // log(changeFirstLetter)
+                        var addR = 'r'+changeFirstLetter
+                        outString+=addR + " "
+                       
+                       
+                    }     
+                    return (outString)
+                }
+        
+        }
+        return animal
+    }
+                          
+var dog = generateDog()
 
 console.assert(dog.speak('i love you') === 'r rove rou')
 console.assert(dog.speak('so hungry') === 'ro rungry')
